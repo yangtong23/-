@@ -1,0 +1,28 @@
+<view class='top'></view>
+
+
+<view class='container'>
+
+
+<view class='login_view'>
+<view class='login_box'>账号</view>
+<input placeholder='用户名/邮箱/手机号' bindinput="input" data-id="uname"  placeholder-class="placeholder_style" />
+</view>
+
+<view class='login_view'>
+<view class='login_box'>密码</view>
+<input placeholder='请输入密码' password bindinput="input"  data-id="pwd"  placeholder-class="placeholder_style" />
+</view>
+
+<view>
+<button class="weui-btn" type="warn" bindtap="login" disabled='{{isLogin}}'  class='login_btn'>登 录</button>
+</view>
+
+
+<view class='log'>
+<text bindtap="reg">手机快速注册</text>
+<text>忘记密码</text>
+</view>
+
+
+</view>

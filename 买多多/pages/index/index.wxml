@@ -1,0 +1,107 @@
+<!-- 首页轮播图 -->
+<view class="broadCast">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay circular interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorAactiveCcolor}}" indicatorColor="{{indicatorColor}}" class='swiper' >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode='widthFix' />
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>
+
+<!-- 首页10个小图标 -->
+<view class='icon_view'>
+  <view wx:for="{{iconList}}" class='icon_image'>
+    <image src="{{item.src}}"></image>
+    <view class="icon_text">{{item.text}}</view>
+  </view>
+</view>
+
+<!-- 多多快报 -->
+<view class='fast_view'>
+  <image src='../../img/duoduo.png' class='duoduo'></image>
+  <swiper autoplay vertical circular interval="{{interval1}}" duration="{{duration}}" class='text_swiper'>
+    <block>
+      <swiper-item wx:for="{{textList}}">
+        <text class='hot_text'>热门</text>
+        <text>{{item}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+  <text>更多</text>
+</view>
+<!-- 留白 -->
+<view class='space_view'></view>
+<view class='prize'>
+  <image src='../../img/prize1.jpg'></image>
+  <image src='../../img/prize2.jpg'></image>
+  <image src='../../img/prize3.jpg'></image>
+</view>
+<view class='space_view'></view>
+<!-- 秒杀 -->
+<view class="SecKill">
+  <view>
+    <text class='font1'>多多秒杀</text>
+    <text class='font2'>{{activeHour}}点场</text>
+    <text class='font3'>{{hours}} : {{minutes}} : {{seconds}}</text>
+  </view>
+
+  <view>
+    <text class='font4'>更多秒杀</text>
+    <image src='../../img/right.png' class='font5'></image>
+  </view>
+</view>
+
+<!-- 秒杀商品 -->
+
+<view class="weui-flex SecKill_view">
+  <view class="weui-flex__item" wx:for="{{secKillGoods}}" data-id="{{item._id}}" bindtap='go_details'>
+    <view class="placeholder">
+      <image src='{{ip1+item.indexImg}}' class='SecKill_img' mode="widthFix"></image>
+      <view class='font6'>￥{{item.salePrice}}</view>
+      <view class='font7'>￥{{item.price}}</view>
+    </view>
+  </view>
+</view>
+<view class='space_view'></view>
+<view>
+<image src="../../img/start_learn.gif" mode="widthFix" class='start_learn' ></image>
+</view>
+
+<view class='groom'>
+<image src='../../img/tuijian.jpg' mode="widthFix" ></image>
+</view>
+
+<!-- 推荐商品 -->
+<view>
+<view  class='groomGoods'>
+  <view class='groom_view' wx:for="{{groomGoods}}" data-id="{{item._id}}" bindtap='go_details'> 
+    <image src='{{ip1+item.indexImg}}' class='groomImg'  mode="widthFix" ></image>
+    <view class='goodName' >
+    <view class='font8'>{{item.name}}</view>
+    <view class='font9'> <text>￥</text>{{item.price}}</view>
+    <view class='font10' >
+       <view>好评率100%</view>
+       <view >看相似</view>
+    </view>
+    </view>
+  </view>
+  
+</view>
+ <view class="weui-loadmore " wx:if = "{{isLoad}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips"></view>
+        </view>
+ <view class="weui-loadmore weui-loadmore_line hehe" wx:if="{{more}}" >
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无更多</view>
+        </view>
+</view>
+
+
+<view class='search_box {{scrollTop>100 ? "scrollBox" : "initBox"}}'>
+ <view class='search_view {{scrollTop>100 ? "scrollView" : "initView"}}' bindtap="search">
+      <image src='../../img/search.png' class='search ' mode="widthFix"></image>
+      <text>  2018夏季女裙</text>
+  </view>
+  </view>

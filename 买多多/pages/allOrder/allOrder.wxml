@@ -1,0 +1,128 @@
+ <view class="swiper-tab  {{scrollTop>130? 'levae_top' :''}}">
+   
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+     <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待发货</view>
+      <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待收货</view>
+       <view class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">待评价</view>
+
+  </view>
+
+
+<!--内容主体-->
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" style="height:{{totalHeight[currentTab]}}rpx;">
+    <!-- 全部 -->
+    <swiper-item  > 
+
+<view  wx:for = "{{orderList}}" wx:for-item="item">
+<view wx:for="{{item.shopList}}" wx:for-item="item1" class='container'> 
+<!-- 商店 -->
+<view class='shop'>
+<image src='{{ip1+item1.logo}}'mode="widthFix"></image>
+<text>{{item1.name}}</text>
+</view>
+<!-- 商品 -->
+    <view wx:for="{{item.goodsList}}" wx:for-item="item2" wx:if="{{item2.shopId==item1._id}}" class='goods'>
+    <image src='{{ip1+item2.goodsImg}}'mode="widthFix"></image>
+    <view>
+      <view class='good_name'>{{item2.goodsName}}</view>
+      <view class='good_norm'>{{item2.goodsNorms}}</view>
+      <view class='goods_change'>七天退换</view>
+      <view class='price'>
+      <view>
+      <text class='money'>￥ </text>
+      <text class='price1'>{{item2.goodsSalePrice? item2.goodsSalePrice :item2.goodsPrice}}</text>
+      </view>
+      <view class='good_num'>x{{item2.goodsNum}}</view>
+      </view>
+    </view>
+    </view>
+ <view class='express'>
+ <view>运费险</view>
+ <view>0.00</view>
+ </view>
+
+</view>
+<view class='cance'>
+  <view>
+  <text data-id="{{item._id}}" bindtap='cancel_order'>取消订单</text>
+  <text>催商铺发货</text>
+  </view>
+</view>
+<!-- 留白 -->
+<view class='space_view'></view>
+</view>
+
+
+    </swiper-item>
+    
+    <!-- 1 -->
+    <swiper-item > 
+    <view class='no_order'>
+     <image src='../../img/no_order.png' mode='widthFix'></image>
+     <view class='font1'>您还没有相关的订单</view>
+     <view class='font2'>可以去看看有哪些想买的</view>
+     </view>
+   </swiper-item>
+
+    <!-- 2 -->
+    <swiper-item > 
+    <view  wx:for = "{{orderList}}" wx:for-item="item">
+<view wx:for="{{item.shopList}}" wx:for-item="item1" class='container'> 
+<!-- 商店 -->
+<view class='shop'>
+<image src='{{ip1+item1.logo}}'mode="widthFix"></image>
+<text>{{item1.name}}</text>
+</view>
+<!-- 商品 -->
+    <view wx:for="{{item.goodsList}}" wx:for-item="item2" wx:if="{{item2.shopId==item1._id}}" class='goods'>
+    <image src='{{ip1+item2.goodsImg}}'mode="widthFix"></image>
+    <view>
+      <view class='good_name'>{{item2.goodsName}}</view>
+      <view class='good_norm'>{{item2.goodsNorms}}</view>
+      <view class='goods_change'>七天退换</view>
+      <view class='price'>
+      <view>
+      <text class='money'>￥ </text>
+      <text class='price1'>{{item2.goodsSalePrice? item2.goodsSalePrice :item2.goodsPrice}}</text>
+      </view>
+      <view class='good_num'>x{{item2.goodsNum}}</view>
+      </view>
+    </view>
+    </view>
+ <view class='express'>
+ <view>运费险</view>
+ <view>0.00</view>
+ </view>
+
+</view>
+<view class='cance'>
+  <view>
+  <text data-id="{{item._id}}" bindtap='cancel_order'>取消订单</text>
+  <text>催商铺发货</text>
+  </view>
+</view>
+<!-- 留白 -->
+<view class='space_view'></view>
+</view>
+   </swiper-item>
+
+    <!-- 3 -->
+    <swiper-item > 
+    <view class='no_order'>
+     <image src='../../img/no_order.png' mode='widthFix'></image>
+     <view class='font1'>您还没有相关的订单</view>
+     <view class='font2'>可以去看看有哪些想买的</view>
+     </view>
+   </swiper-item>
+
+    <!-- 4 -->
+    <swiper-item > 
+    <view class='no_order'>
+     <image src='../../img/no_order.png' mode='widthFix'></image>
+     <view class='font1'>您还没有相关的订单</view>
+     <view class='font2'>可以去看看有哪些想买的</view>
+     </view>
+   </swiper-item>
+
+     </swiper>

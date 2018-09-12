@@ -1,0 +1,45 @@
+<view class='search_top'>
+<view class='search_box'>
+<icon type="search" size="16" color="#787879"/>
+<input placeholder='女衣'  auto-focus confirm-type="search" bindconfirm="search" bindinput="loadInput"/>
+</view>
+<view class='search_btn' bindtap='search'>搜索</view>
+</view>
+
+
+<view wx:if="{{disHistory == '0'}}">
+<view class='history_search'>历史搜索</view>
+<view wx:for="{{history}}" class='history_result' data-id="{{item}}" bindtap='search_history'>{{item}}</view>
+</view>
+
+<view wx:elif="{{disHistory == '1'}}">
+ <view class='search_shops' wx:for="{{shopList}}" data-id="{{item._id}}" bindtap='go_shop'><image src='{{ip1+item.logo}}' mode='widthFix'></image> {{item.name}}</view>
+ <view class='search_goods' wx:for="{{goodsList}}" data-id="{{item._id}}"  bindtap='go_details'>
+ <view > {{item.name}}</view>
+ <image src='../../img/right_top.png' mode='widthFix'></image>
+</view>
+</view>
+
+<view wx:else>
+
+  <view wx:for="{{result}}" class='right_goods' data-id="{{item._id}}" bindtap='go_details' >
+        <view class='leftImg'>
+          <image src='{{ip1+item.indexImg}}' mode="widthFix" class='good_img'></image>
+        </view>
+
+        <view class='right_text'>
+          <view class='font1'>{{item.name}}</view>
+          <view class='font6'>
+            <text class='font2'> ￥</text>
+            <text class='font3'>{{item.price}}</text>
+          </view>
+          <view class='font7'>
+            <text wx:if="{{item.express=='0'}}" class='font4'>包邮</text>
+            <text class='font5'> {{item.monthSale}}人付款</text>
+          </view>
+
+        </view>
+
+      </view>
+</view>
+

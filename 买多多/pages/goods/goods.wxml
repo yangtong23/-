@@ -1,0 +1,216 @@
+<!-- 首页轮播图 -->
+<view class="broadCast">
+  <swiper indicator-dots autoplay circular class='swiper' indicator-active-color="white" indicatorColor="#cdcdcd">
+    <block wx:for="{{goodsInfo.img}}">
+      <swiper-item>
+        <image src="{{ip1+item}}" class="slide-image" mode='widthFix' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+<!-- 中间块 -->
+<view class='middle_box'>
+  <!-- 商品名 -->
+  <view class='goods_name'>
+    <view class='goods_name_left'>
+      {{goodsInfo.name}}
+    </view>
+    <view>
+      <image src='../../img/share.png' mode='widthFix'></image>
+      <view>分享</view>
+    </view>
+  </view>
+
+  <!-- 价格 -->
+
+  <view>
+    <text class='font1'>￥</text>
+    <text class='font2'>{{goodsInfo.salePrice=="" ? goodsInfo.price : goodsInfo.salePrice}} </text> </view>
+  <view class='prive' wx:if="{{goodsInfo.salePrice!==''}}">
+    <text class='font3'>价格 </text>
+    <text class='font4'>   {{goodsInfo.price}}</text> </view>
+
+  <!-- 运费 -->
+  <view class='goods_express'>
+    <view>{{goodsInfo.express == "0" ? "快递包邮" : "快递: "+goodsInfo.express}}</view>
+    <view>月销{{goodsInfo.monthSale}}笔</view>
+    <view>{{goodsInfo.adress}}</view>
+  </view>
+
+</view>
+
+
+
+<!-- 留白 -->
+<view class='space_view'></view>
+
+<!-- 福利 -->
+<view class='boon'>
+  <view class='boon_left'>
+
+    <view>
+      <icon type="success" size="14" color="orange" />
+      <text> 极速退货</text>
+    </view>
+    <view>
+      <icon type="success" size="14" color="orange" />
+      <text> 正品保证</text>
+    </view>
+    <view>
+      <icon type="success" size="14" color="orange" />
+      <text> 极速退款</text>
+    </view>
+
+  </view>
+  <view>
+    <image src='../../img/right1.png' mode='widthFix'></image>
+  </view>
+</view>
+
+
+
+
+<view class='space_view'></view>
+
+
+<view class='norm norm1' bindtap='showModal' data-type="" data-id="isSee">
+  <text>选择规格</text>
+  <image src='../../img/right1.png' mode='widthFix'></image>
+</view>
+<view class='norm'>
+  <text>产品参数</text>
+  <image src='../../img/right1.png' mode='widthFix'></image>
+</view>
+<view class='space_view'></view>
+
+<view class="weui-loadmore weui-loadmore_line hehe">
+  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">
+    <image src="../../img/content.png" mode='widthFix'></image> 评价
+  </view>
+</view>
+
+
+<view class='comment'>暂无评价(0)</view>
+
+
+<view class='space_view'></view>
+
+
+<view class='shop_box'>
+  <view class='shop' data-id="0" bindtap='goShop'> 
+    <image src="{{ip1+shopsInfo.logo}}" mode='widthFix'></image>
+    <view>{{shopsInfo.name}}</view>
+
+  </view>
+
+  <view class='shop_details'>
+    <view>
+      <view class='shop_num'>{{shopsInfo.goods.length}}</view>
+      <view>全部宝贝</view>
+    </view>
+
+    <view class='follow'>
+      <view class='shop_num'>{{shopsInfo.fans}}</view>
+      <view>关注人数</view>
+    </view>
+
+    <view>
+      <view>宝贝描述
+        <text>0.0</text>
+      </view>
+      <view>卖家服务
+        <text>0.0</text>
+      </view>
+      <view>物流服务
+        <text>0.0</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='find_shop'>
+  <view bindtap='goShop' data-id="1">查看宝贝</view>
+  <view bindtap='goShop' data-id="0">进店逛逛</view>
+</view>
+
+<view class='space_view'></view>
+
+<view class="weui-loadmore weui-loadmore_line hehe">
+  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">
+    <image src="../../img/details.png" mode='widthFix'></image> 详情
+  </view>
+</view>
+<view class='details_img'>
+  <image wx:for="{{goodsInfo.infoImg}}" src='{{ip1+item}}' mode="widthFix"></image>
+</view>
+
+
+
+<!-- 下方购购物 -->
+<view class='shopcar'>
+  <view bindtap='goShop' data-id="0">
+    <image src='../../img/shop.png' mode='widthFix'></image>
+    <view>店铺</view>
+  </view>
+
+  <view>
+    <image src='../../img/kefu.png' mode='widthFix'></image>
+    <view>客服</view>
+  </view>
+
+  <view class='house_goods' bindtap='house_goods'>
+    <image src="{{houseImg}}" mode='widthFix'></image>
+    <view>收藏</view>
+  </view>
+  <view class='buf'>
+    <text class='add_shopcar' data-type="shopcar" bindtap='showModal'>加入购物车</text>
+    <text class='buy' data-type="buy" bindtap='showModal'>立即购买</text>
+  </view>
+</view>
+
+
+
+<!--屏幕背景变暗的背景 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框 -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <!-- 弹出框内容 -->
+  <view class='model_max'>
+    <view class='select_norms'>
+      <image src='{{ip1+goodsInfo.indexImg}}' mode="widthFix"></image>
+      <view>
+        <view class='good_price'>
+          <text>￥{{goodsInfo.salePrice?goodsInfo.salePrice:goodsInfo.price}}</text>
+          <icon type="cancel" size="24" color="#797979" bindtap="hideModal" />
+        </view>
+        <view>库存9999件</view>
+        <view>请选择
+          <text wx:for="{{norms}}">    {{ ""+item.types}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:for="{{norms}}" class='norm_list'>
+      <view>{{item.types}}</view>
+      <view data-type="{{item.types}}" bindtap='select_type' class='norm_listss'>
+        <view wx:for="{{item.list}}" data-type="{{item}}" bindtap='select_norms' class='{{(item==norm1||item==norm2)?"active":""}}'>{{item}}</view>
+      </view>
+    </view>
+    <!-- 购买数量 -->
+    <view class='buy_num'>
+      <view class='buy1'>购买数量</view>
+      <view>
+        <text class='change_num' bindtap='dec'>-</text>
+        <text class='num'>{{num}}</text>
+        <text class='change_num' bindtap='add'>+</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{isSee}}" class='sure_btn'>
+    <view data-id="shopcar" bindtap='sure'>加入购物车</view>
+    <view data-id="buy" bindtap='sure'>立即购买</view>
+  </view>
+  <view wx:else class='sure' bindtap='sure' data-id="{{modelType}}">确定</view>
+
+</view>

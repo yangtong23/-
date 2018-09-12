@@ -1,0 +1,83 @@
+<!--logs.wxml-->
+<view class="emtry_shopcar" wx:if="{{showCar}}">
+  <image src='../../img/shopcar.png' mode='widthFix'></image>
+  <view>购物车空空如也 , 去逛逛吧~</view>
+
+</view>
+<view wx:else>
+  <view class="weui-cells weui-cells_after-title container">
+
+    <label class="weui-cell weui-check__label hehe" wx:for="{{goodsList}}">
+      <!-- <checkbox class="weui-check" value="{{item}}" checked="{{item.state}}" /> -->
+    <view class="weui-cell__hd weui-check__hd_in-checkbox" data-id="{{index}}" bindtap='select'>
+        <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{item.state=='false'}}"></icon>
+        <icon class="weui-icon-checkbox_success" type="success" size="23" color="red" wx:if="{{item.state=='true'}}"></icon>
+      </view>
+      <view class="weui-cell__bd good_item">
+        <image src='{{ip1+item.goodsImg}}' mode='widthFix'></image>
+        <view>
+          <view class='goods_name'>{{item.goodsName}}</view>
+          <view class='goods_norm'>{{item.goodsNorms}}</view>
+          <view class='goods_price'>
+            <view>
+              <text class='font1'>￥</text>
+              <text class='font2'>{{item.goodsSalePrice ? item.goodsSalePrice : item.goodsprice}}</text>
+              <text wx:if="{{item.goodsSalePrice}}" class='font3'>{{item.goodsPrice}}</text>
+            </view>
+            <view class='font6'>
+              <text class='font4' bindtap='dec' data-id="{{index}}">-</text>
+              <text  class='font5'> {{item.goodsNum}}</text>
+              <text  class='font4' bindtap='add' data-id="{{index}}">+</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </label>
+
+  </view>
+</view>
+
+<!-- 结算 -->
+<view class='balance' wx:if="{{!showCar}}">
+ <view  bindtap='select_all' class='select_all'>
+        
+        <icon class="weui-icon-checkbox_success" type="success" size="23" color="red" wx:if="{{selectAll}}"></icon>
+        <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:else></icon>
+          <text >全选</text>
+      </view>
+    
+<view class='total_price'>
+<text class='goods_norm'>不含运费 </text>
+<text class='font7'> 合计:</text>
+<text class='font1'>￥</text>
+<text class='font2'>{{total}}</text>
+
+</view>
+<view class='balance_btn' bindtap='balance'> 结算({{totalNum}})</view>
+</view>
+
+
+<view class="weui-loadmore weui-loadmore_line guess" wx:if="{{showCar}}">
+  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">猜你喜欢</view>
+</view>
+
+
+<view>
+</view>
+
+
+
+<!-- 推荐商品 -->
+
+<view class='groomGoods' wx:if="{{showCar}}">
+  <view class='groom_view' wx:for="{{groomGoods}}" data-id="{{item._id}}" bindtap='go_details'>
+    <image src='{{ip1+item.indexImg}}' class='groomImg' mode="widthFix"></image>
+    <view class='goodName'>
+      <view class='font8'>{{item.name}}</view>
+      <view class='font9'>
+        <text>￥</text>{{item.price}} </view>
+
+    </view>
+  </view>
+
+</view>

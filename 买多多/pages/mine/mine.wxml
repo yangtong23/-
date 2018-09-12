@@ -1,0 +1,53 @@
+<!-- 登录后 -->
+<view class='top' wx:if="{{isLogin}}">
+ <image src='../../img/head.png' mode='widthFix'></image>
+ <text class='nickname' > {{userInfo.nickName}}</text>
+</view>
+
+<!-- 登录前 -->
+<view class='top' wx:else>
+ <image src='../../img/default_head.jpg' mode='widthFix'></image>
+ <text bindtap='login'> 登陆 / 注册</text>
+ <image src='../../img/right2.png' class='icon_right' mode='widthFix'></image>
+</view>
+
+
+<!-- 我的订单 -->
+<view class='order' bindtap='order'>
+ <view class='myorder'>
+ 我的订单
+ </view>
+
+ <view>
+ <text class='findAll'>查看全部</text>
+ <image src='../../img/right1.png' class='icon_right2' mode='widthFix'></image>
+ </view>
+</view>
+<view></view>
+
+<view class='orderList'> 
+   <view wx:for="{{orderList}}">
+   <image src='{{item.url}}' mode='widthFix' class='orderImg'></image>
+   <view class='orderText'>{{item.text}}</view>
+   </view>
+</view>
+<!-- 留白 -->
+<view class='space_view'></view>
+
+<view class='houseList'> 
+   <view wx:for="{{houseList}}">
+   <image src='{{item.url}}' mode='widthFix' class='houseImg'></image>
+   <view class='houseText'>{{item.text}}</view>
+   </view>
+</view>
+
+   <!-- 留白 -->
+<view class='space_view'></view>
+
+<view class='welfareList'> 
+   <view wx:for="{{welfareList}}" class='welfareView'>
+   <image src='{{item.url}}' mode='widthFix' class='welfareImg'></image>
+   <view class='welfareText'>{{item.text}}</view>
+   </view>
+</view>
+

@@ -1,0 +1,61 @@
+<view class='shop_top'>
+<image src='{{ip1+shopInfo.backimg}}' mode="widthFix"></image>
+<view class='search' bindtap="search">
+ <icon type="search" size="14" color="#797979"/>
+  <text> 中秋大礼包</text>
+</view>
+
+<view class='top_text'>
+<view class='shop_name'>
+ <image src='{{ip1+shopInfo.logo}}' mode="widthFix"></image>
+ <view>{{shopInfo.name}}</view>
+
+</view>
+
+<view class='shop_house'>
+ <view>
+ <view>{{shopInfo.fans}}</view>
+ <view>粉丝数</view>
+ </view>
+ <view class='house1' wx:if="{{isCollection}}"> 已收藏</view>
+ <view class='house' bindtap='Collection' wx:else> <image src='../../img/house3.png' mode="widthFix"></image> 收藏</view>
+  
+</view>
+
+
+</view>
+</view>
+
+
+ <view class="swiper-tab  {{scrollTop>130? 'levae_top' :''}}">
+   
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">首页</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">全部宝贝</view>
+
+  </view>
+
+
+   <!--内容主体-->
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" style="height:{{totalHeight[currentTab]}}rpx;">
+    <!-- 首页 -->
+    <swiper-item  class="image_list"> 
+    <image wx:for="{{shopInfo.img}}" src='{{ip1+item}}' mode="widthFix" class='detail_img'></image>
+    </swiper-item>
+    <!-- 全部宝贝 -->
+    <swiper-item > 
+   
+    <view  class='groomGoods'>
+  <view class='groom_view' wx:for="{{goodsList}}" data-id="{{item._id}}" bindtap='go_details'>
+    <image src='{{ip1+item.indexImg}}' class='groomImg'  mode="widthFix"></image>
+    <view class='goodName'>
+    <view class='font8'>{{item.name}}</view>
+    <view class='font9'> <text>￥</text>{{item.price}} <text class='aplly'>{{item.monthSale}}人付款</text></view>
+ 
+    </view>
+  </view>
+  
+</view>
+    
+    </swiper-item>
+
+     </swiper>

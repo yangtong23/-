@@ -1,0 +1,20 @@
+.address{
+  border-top: 1rpx solid #eaeaea;
+  padding-left:20rpx; 
+}
+.address_item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid  #f3f3f3;
+  padding: 20rpx 0;
+}
+.address_item>view{
+  color: #817d7d;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+.input_place{
+  color: #c7c2c2;
+  font-size: 28rpx;
+}

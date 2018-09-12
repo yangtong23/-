@@ -1,0 +1,169 @@
+.shop_top{
+  width: 100%;
+  padding-top: 20rpx;
+position: relative;
+/* overflow: hidden; */
+
+}
+.shop_top>image{
+position: absolute;
+z-index: -22;
+width: 100%;
+opacity: 0.8;
+}
+.search{
+  overflow: hidden;
+  width: 80%;
+    margin: 20rpx auto  20rpx;
+  background:  rgba(244, 244, 244, 0.7);
+  color: #797575;
+  padding: 10rpx 30rpx;
+  border-radius: 40rpx;
+  font-size: 26rpx;
+  
+}
+
+.top_text{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+}
+
+.shop_name{
+  display: flex;
+ align-items: center;
+ color: rgb(236, 231, 231);
+ font-size: 28rpx;
+ letter-spacing: 4rpx;
+}
+.shop_name image{
+  width: 100rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.shop_house{
+   display: flex;
+ align-items: center;
+ color: rgb(236, 231, 231);
+ font-size: 26rpx;
+ text-align: center;
+}
+
+.shop_house  image{
+  width: 30rpx;
+}
+
+.house{
+  margin-left: 20rpx;
+  background: rgb(235, 42, 42);
+  padding: 8rpx 20rpx;
+   border-radius: 30rpx;
+}
+.house1{
+  margin-left: 20rpx;
+  background: #bdb9b9;
+  color: #757373;
+  padding: 8rpx 24rpx;
+   border-radius: 30rpx;
+
+}
+
+
+
+
+.swiper-tab {
+  background: white;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 100rpx;
+  font-size: 30rpx;
+  color: #7c7979;
+  flex-direction: row;
+  border-bottom: 1rpx solid #d3d3d3;
+
+}
+.levae_top{
+    position: fixed;
+      left: 0;
+        top: 0;
+        z-index: 9999;
+}
+
+.tab-item {
+  width: 30%;
+  text-align: center;
+  padding-bottom: 8rpx;
+  /* font-weight: bold; */
+  box-sizing: border-box;
+  border-bottom: 4rpx solid transparent;
+}
+
+.swiper {
+ height: 6000rpx;
+ 
+}
+
+.on {
+  color: black;
+  border-bottom: 4rpx solid rgb(243, 67, 67);
+}
+
+.detail_img{
+  width: 100%;
+}
+
+
+/* 全部商品 */
+.groomGoods{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.groom_view{
+  width: 50%;
+  box-sizing: border-box;
+  border: 3px solid #f1f1f1;
+  border-collapse: collapse;
+}
+.groomImg{
+  width: 100%;
+}
+.font8{
+overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+font-size: 28rpx;
+color: black;
+}
+.font9{
+  padding: 10rpx 0; 
+  color: #f23030;
+  font-size: 30rpx;
+}
+.font9>text{
+  font-size: 26rpx;
+}
+.goodName{
+  padding:  0 8rpx 20rpx;
+}
+
+.aplly{
+  color: rgb(88, 84, 84);
+  font-size: 20rpx;
+  margin-left: 20rpx;
+}
+
+.image_list{
+  position: relative;                                                                  
+display: flex;
+flex-direction: column;
+}
+.image_list>image{
+  vertical-align:top;
+}

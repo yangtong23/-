@@ -1,0 +1,20 @@
+<view class='welfareList'> 
+   <view wx:for="{{welfareList}}" class='welfareView'>
+   <image src='{{item.url}}' mode='widthFix' class='welfareImg'></image>
+   <view class='welfareText'>{{item.text}}</view>
+   </view>
+</view>
+
+<view class='message'>
+<image src='../../img/null.png' mode='widthFix'></image>
+ <view>竟然一条消息都没有</view>
+</view>
+
+
+
+<view  wx:for="{{list1}}" wx:for-item="item1">
+    
+    <view wx:for="{{list2}}" wx:for-item="item2" wx:if= "{{item1==item2}}">
+      <view>{{item1}} {{item2}}</view>
+       </view>
+</view>

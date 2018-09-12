@@ -1,0 +1,21 @@
+.money{
+  font-size: 52rpx;
+  font-weight: bold;
+  color: black;
+}
+.price{
+
+   font-size: 80rpx;
+  font-weight: bold;
+  color: black;
+}
+
+
+.success_btn{
+  border: 2rpx solid #1aad16 !important;
+  color: #1aad16 !important;
+  background: white;
+  line-height: 80rpx;
+  width: 300rpx;
+  
+}

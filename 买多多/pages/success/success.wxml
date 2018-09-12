@@ -1,0 +1,28 @@
+<view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="93"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">支付成功</view>
+            <view class="weui-msg__desc">
+            <text class='money'>￥ </text>
+            <text class='price'>{{total}}</text>
+            </view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="default" style='margin-top:400rpx' class='success_btn' bindtap='finish'>完成</button>
+               
+            </view>
+        </view>
+        <view class="weui-msg__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <navigator url="../index/index" open-type="switchTab" class="weui-footer__link">返回买多多首页</navigator>
+                </view>
+                <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+            </view>
+        </view>
+    </view>
+</view>

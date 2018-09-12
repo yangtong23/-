@@ -1,0 +1,15 @@
+.inputView{
+  padding: 30rpx 0 ;
+  font-size: 30rpx;
+  color: rgb(22, 22, 22);
+}
+.placeStyle{
+  font-size: 28rpx;
+}
+.login_btn{
+  width: 90%;
+  height: 80rpx;
+   line-height: 80rpx;
+   font-size: 30rpx;
+   margin: 20rpx auto;
+}

@@ -1,0 +1,132 @@
+.search_top{
+  padding: 20rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+input{
+  margin-left: 20rpx;
+  width: 100%;
+}
+.search_box{
+   width: 78%;
+  background: #f4f4f4;
+  border-radius: 40rpx;
+  font-size: 26rpx;
+  padding: 6rpx 20rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 10rpx;
+}
+.search_btn{
+  padding: 4rpx 20rpx;
+  background: rgb(253, 36, 36);
+  color: white;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+
+}
+
+.history_search{
+  font-size: 28rpx;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  font-weight: bold;
+}
+.history_result{
+  font-size: 28rpx;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  color: #423f3f;
+}
+.search_shops{
+   font-size: 28rpx;
+  padding: 20rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.search_shops image{
+  width: 40rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.search_goods{
+  font-size: 26rpx;
+  padding: 20rpx;
+  color: #4e4c4c;
+  border-bottom: 1rpx solid #f0f0f0;
+ display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search_goods>image{
+  width: 40rpx;
+}
+.search_goods>view{
+  width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.right_goods{
+  display: flex;
+  align-items: center;
+  padding: 8rpx 0;
+}
+.leftImg{
+  width: 40%;
+}
+.good_img{
+  width: 80%;
+}
+.right_text{
+  width: 60%;
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+  padding-bottom: 20rpx;
+}
+.font1{
+   display: -webkit-box;
+    font-size:28rpx;
+    color:#000000;
+    line-height: 36rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    margin-bottom: 20rpx;
+    
+}
+.font2{
+  color: red;
+}
+.font3{
+   color: red;
+   font-size: 26rpx;
+   margin-bottom: 10rpx;
+
+}
+.font4{
+     color: #eb5211;
+     border: 1rpx solid #eb5211;
+     border-radius: 4rpx;
+     padding: 0 6rpx;
+     margin-right: 12rpx;
+}
+.font5{
+  color: #adadad;
+}
+.font6{
+  margin-bottom: 14rpx;
+}
+.font7{
+  font-size: 24rpx;
+}

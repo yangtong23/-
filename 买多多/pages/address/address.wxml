@@ -1,0 +1,15 @@
+<view class='address'>
+   <view class='address_item'>
+   <view>收货人</view>
+   <input placeholder-class="input_place" placeholder="姓名"></input>
+   </view>
+   <view class='address_item'>
+   <view>联系方式</view>
+   <input placeholder-class="input_place" placeholder="手机号码"></input>
+   </view>
+     <view class='address_item' bindtap='address'>
+   <view>详细地址</view>
+   <input placeholder-class="input_place" placeholder="市/省/区/单元"></input>
+   </view>
+   
+</view>

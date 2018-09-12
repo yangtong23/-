@@ -1,0 +1,385 @@
+.broadCast{
+  text-align: center;
+}
+.slide-image{
+  width: 98%;
+ 
+}
+.swiper{
+  height: 725rpx;
+}
+.middle_box{
+  padding: 20rpx;
+}
+
+.goods_name{
+  letter-spacing:2rpx ;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   font-size: 20rpx;
+  color: #8a8a8a;
+  /* margin-bottom: 20rpx; */
+}
+
+.goods_name image{
+  width: 48rpx;
+ 
+}
+.goods_name_left{
+  width: 80%;
+  display: -webkit-box;
+    font-size:28rpx;
+    line-height: 40rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+  color: black;
+  
+}
+.goods_express{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #8a8a8a;
+  /* margin-bottom: 20rpx; */
+}
+
+.space_view{
+  width: 100%;
+  height: 20rpx;
+  background: #f1f1f1;
+
+}
+.font1{
+  color: #ff4747;
+  font-size: 24rpx;
+}
+.font2{
+  color: #ff4747;
+  font-size: 32rpx;
+}
+.font3{
+  color: #8a8a8a;
+  font-size: 24rpx;
+}
+.font4{
+  text-decoration: line-through;
+  color: #8a8a8a;
+  font-size: 24rpx;
+}
+.prive{
+  line-height: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.boon{
+  box-sizing: border-box;
+  padding: 20rpx 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #8a8a8a;
+  background: #f7f7f7;
+}
+.boon_left{
+  display: flex;
+  justify-content: space-between;
+   /* width: 80%; */
+
+}
+.boon image{
+  width: 30rpx;
+}
+.boon_left{
+  width: 80%;
+}
+
+.norm{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 20rpx;
+
+}
+.norm>image{
+   width: 30rpx;
+   vertical-align: middle;
+}
+.norm1{
+  border-bottom: 1rpx solid #f1f1f1;
+}
+
+.hehe{
+  font-size: 28rpx;
+
+  
+}
+.hehe image{
+  width: 40rpx;
+  vertical-align: middle;
+}
+
+
+.comment{
+
+  font-size: 28rpx;
+  padding: 20rpx ;
+ border-top: 1rpx solid #f1f1f1;
+}
+.shop_box{
+  padding: 20rpx;
+}
+.shop{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  letter-spacing:2rpx ;
+  margin-bottom: 20rpx;
+  
+}
+.shop image{
+  width: 100rpx; 
+  margin-right: 40rpx;
+}
+.shop_details{
+  color: #8a8a8a;
+  font-size: 26rpx;
+  display: flex;
+  text-align: center;
+align-items: center;
+justify-content: space-around;
+}
+.follow{
+  padding: 0 60rpx;
+  border-left: 1rpx solid  #f0f0f0;
+   border-right: 1rpx solid  #f0f0f0;
+}
+.shop_num{
+  font-size: 30rpx;
+  color: rgb(26, 25, 25);
+}
+.shop_details text{
+  color: red;
+}
+.details_img>image{
+  width: 100%;
+  margin: 0;
+}
+.details_img{
+  margin-bottom:100rpx; 
+}
+.find_shop{
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 100rpx 60rpx;
+  
+}
+.find_shop>view{
+  font-size: 28rpx;
+   color: rgb(255, 115, 0);
+   border: 1rpx solid rgb(255, 115, 0) ;
+   padding: 4rpx 20rpx;
+   border-radius: 40rpx;
+}
+.shopcar{
+  display: flex;
+  width: 100%;
+  background: white;
+box-sizing: border-box;
+  /* height: 120rpx; */
+  text-align: center;
+  border-top: 1rpx solid #f3f3f3;
+  position: fixed;
+  align-items: center;
+  bottom: 0;
+  justify-content: space-between;
+  padding-left: 20rpx;
+}
+
+
+.shopcar image{
+  width: 60rpx;
+  
+}
+.shopcar>view>view{
+  letter-spacing: 2rpx;
+  font-size: 20rpx;
+  color: #8a8a8a;
+  transform: translateY(-10rpx)
+ 
+}
+.add_shopcar{
+  display: inline-block;
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: white;
+  background: rgb(253, 135, 39);
+}
+.buy{
+   display: inline-block;
+   color: white;
+     padding: 30rpx 40rpx;
+   font-size: 30rpx;
+  background: rgb(238, 61, 61);
+}
+
+/*使屏幕变暗 */
+.commodity_screen {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ background: #000;
+ opacity: 0.4;
+ overflow: hidden;
+ z-index: 1000;
+ color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+ /* height: 800rpx; */
+ width: 100%;
+ /* overflow: hidden; */
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ z-index: 2000;
+ background: #fff;
+/* position: relative; */
+ box-sizing: border-box;
+}
+.model_max{
+ padding: 20rpx;
+}
+
+.select_norms{
+  display: flex;
+  font-size: 26rpx;
+  color: black;
+  letter-spacing: 2rpx;
+}
+.select_norms>view{
+  width: 100%;
+}
+.select_norms>image{
+  width: 300rpx;
+  padding: 8rpx;
+  border: 1rpx solid #dbdada;
+  border-radius: 8rpx;
+  transform: translateY(-40rpx);
+  margin-right: 20rpx;
+  background: white;
+  
+}
+
+.good_price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: red;
+  font-size: 30rpx;
+}
+.norm_list{
+  border-bottom: 1rpx solid #f0f0f0;
+  padding: 10rpx 0  ;
+}
+.norm_list>view{
+  font-size: 28rpx;
+  margin-bottom: 14rpx;
+}
+.norm_listss{
+  display: flex;
+  flex-wrap: wrap;
+}
+.norm_listss>view{
+  font-size: 24rpx;
+  background: #f0f0f0;
+  padding: 10rpx 20rpx; 
+  /* margin-right: 20rpx; */
+  margin: 10rpx;
+  border-radius: 20rpx;
+}
+.buy_num{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 0rpx;
+  border-bottom: 1rpx solid  #f0f0f0;
+  margin-bottom: 80rpx;
+
+}
+
+.change_num{
+  font-size: 40rpx;
+  color: rgb(46, 44, 44);
+  background: #f0f0f0;
+  padding: 10rpx 30rpx;
+}
+.num{
+  display: inline-block;
+  font-size: 34rpx;
+  width: 100rpx;
+text-align: center;
+ 
+}
+.buy1{
+  font-size: 32rpx;
+}
+.sure{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  background: rgb(236, 36, 36);
+  color: white;
+  font-synthesis: 30rpx;
+}
+
+.active{
+  background: red !important;
+  color: white;
+}
+
+.sure_btn{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+}
+.sure_btn>view:first-child{
+  width: 50%;
+  text-align: center;
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: white;
+  background: rgb(253, 135, 39);
+}
+.sure_btn>view:last-child{
+  width: 50%;
+  text-align: center;
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: white;
+  background: rgb(238, 61, 61);
+}
+
+
+/* .xiding{
+   position: -webkit-sticky;
+ position: sticky;
+   top: 0;
+  left: 0;
+ z-index: 9999;
+} */
